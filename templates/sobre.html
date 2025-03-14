@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Gerador de Piadas</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold">Gerador de Piadas</a>
+                <div class="space-x-4">
+                    <a href="/" class="hover:text-gray-400">Início</a>
+                    <a href="/sobre" class="hover:text-gray-400">Sobre</a>
+                    <a href="/contato" class="hover:text-gray-400">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center mb-6">Sobre o Projeto</h1>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    O <strong>Gerador de Piadas</strong> é um projeto desenvolvido para trazer diversão e humor de forma simples e acessível. 
+                    Utilizamos a <strong>JokeAPI</strong> para buscar piadas aleatórias e garantir que todas sejam adequadas para todos os públicos.
+                </p>
+                <p class="text-gray-700">
+                    Este projeto foi criado como parte de um trabalho escolar, com o objetivo de integrar tecnologias modernas, como o 
+                    <strong>Flask</strong> para o backend e o <strong>Tailwind CSS</strong> para o design da interface.
+                </p>
+                <p class="text-gray-700">
+                    Se você tiver alguma sugestão ou quiser contribuir com o projeto, sinta-se à vontade para entrar em contato!
+                </p>
+            </div>
+            <div class="mt-6">
+                <h2 class="text-xl font-bold mb-2">Tecnologias Utilizadas</h2>
+                <ul class="list-disc list-inside text-gray-700">
+                    <li>Flask (Backend)</li>
+                    <li>Tailwind CSS (Design)</li>
+                    <li>JokeAPI (Integração de Piadas)</li>
+                    <li>Google Translate API (Tradução)</li>
+                </ul>
+            </div>
+            <!-- Botão Voltar -->
+            <div class="text-center mt-6">
+                <a href="/" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                    Voltar
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Gerador de Piadas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

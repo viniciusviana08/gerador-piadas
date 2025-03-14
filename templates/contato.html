@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Gerador de Piadas</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold">Gerador de Piadas</a>
+                <div class="space-x-4">
+                    <a href="/" class="hover:text-gray-400">Início</a>
+                    <a href="/sobre" class="hover:text-gray-400">Sobre</a>
+                    <a href="/contato" class="hover:text-gray-400">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center mb-6">Contato</h1>
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    Você pode entrar em contato comigo através dos seguintes meios:
+                </p>
+                <div class="space-y-2">
+                    <!-- LinkedIn -->
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="w-6 h-6 mr-2">
+                        <a href="https://www.linkedin.com/in/vinicius-dias-viana-58384b303/" target="_blank" class="text-blue-500 hover:underline">
+                            LinkedIn
+                        </a>
+                    </div>
+                    <!-- E-mail -->
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="E-mail" class="w-6 h-6 mr-2">
+                        <a href="mailto:vinicius.diasviana.senai@gmail.com" class="text-blue-500 hover:underline">
+                            vinicius.diasviana.senai@gmail.com
+                        </a>
+                    </div>
+                    <!-- GitHub -->
+                    <div class="flex items-center">
+                        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="w-6 h-6 mr-2">
+                        <a href="https://github.com/viniciusviana08" target="_blank" class="text-blue-500 hover:underline">
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Botão Voltar -->
+            <div class="text-center mt-6">
+                <a href="/" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                    Voltar
+                </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Vinicius Dias Viana. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

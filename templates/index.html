@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Piadas Aleatórias</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Fonte do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <a href="/" class="text-2xl font-bold">Gerador de Piadas</a>
+                <div class="space-x-4">
+                    <a href="/" class="hover:text-gray-400">Início</a>
+                    <a href="/sobre" class="hover:text-gray-400">Sobre</a>
+                    <a href="/contato" class="hover:text-gray-400">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-6">
+            <h1 class="text-3xl font-bold text-center mb-6">Gerador de Piadas</h1>
+            <!-- Seleção de Categoria -->
+            <div class="mb-6">
+                <label for="categoria" class="block text-lg font-medium text-gray-700">Escolha uma categoria:</label>
+                <select id="categoria" class="mt-2 block w-full p-2 border border-gray-300 rounded-lg">
+                    <option value="Any">Qualquer</option>
+                    <option value="Programming">Programação</option>
+                    <option value="Pun">Trocadilho</option>
+                    <option value="Misc">Diversos</option>
+                    <option value="Spooky">Assustador</option>
+                </select>
+            </div>
+            <!-- Piada -->
+            <div class="text-center">
+                <p id="piada" class="text-xl font-semibold text-gray-800">{{ piada }}</p>
+                <p id="rpiada" class="mt-4 text-lg text-gray-600">{{ rpiada }}</p>
+            </div>
+            <!-- Botão para nova piada -->
+            <div class="text-center mt-6">
+                <button id="nova-piada-btn" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                    Nova Piada
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4 mt-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Vinicius Dias Viana. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.getElementById("nova-piada-btn").addEventListener("click", function() {
+            const categoria = document.getElementById("categoria").value;
+            fetch(`/nova-piada?categoria=${categoria}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("piada").textContent = data.piada;
+                    document.getElementById("rpiada").textContent = data.rpiada || "";
+                });
+        });
+    </script>
+</body>
+</html>
